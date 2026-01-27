@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/text_view_id"
+        android:layout_width="328dp"
+        android:layout_height="98dp"
+        android:padding="15dp"
+        android:text="Sistema de Controle de Atividades 1.0"
+
+        tools:layout_editor_absoluteX="58dp"
+        tools:layout_editor_absoluteY="83dp" />
+
+    <TextView
+        android:id="@+id/text_view_id2"
+        android:layout_width="328dp"
+        android:layout_height="98dp"
+        android:hint="10.000 pts"
+        android:imeOptions="actionDone"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:padding="1dp"
+
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="173dp"
+        tools:layout_editor_absoluteY="316dp" />
+
+    <Button
+        android:layout_width="164dp"
+        android:layout_height="92dp"
+        android:backgroundTint="#E91E63"
+        android:text="OK"
+        tools:layout_editor_absoluteX="123dp"
+        tools:layout_editor_absoluteY="528dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
