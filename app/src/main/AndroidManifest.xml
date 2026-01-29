@@ -13,8 +13,7 @@
         android:theme="@style/Theme.MyApplication">
         <activity
             android:name=".SeguroActivity"
-            android:exported="false">
-        </activity>
+            android:exported="false"></activity>
         <activity
             android:name=".LoginActivity"
             android:exported="true">
