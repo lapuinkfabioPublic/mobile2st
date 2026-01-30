@@ -22,6 +22,18 @@
                 tools:layout_editor_absoluteY="83dp" />
 
 
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:contentDescription="Sistema de Mensagens"
+                android:src="@drawable/baseline_question_answer_24"
+                app:tint="#C1C1" />
+
+            <CheckBox
+                android:text="Lembrar Sessão"
+                android:checked="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
 
             <Button
                 android:layout_width="164dp"
