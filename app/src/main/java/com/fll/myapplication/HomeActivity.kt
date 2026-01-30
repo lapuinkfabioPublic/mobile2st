@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.fll.myapplication.databinding.ActivityHomeBinding
+import com.fll.myapplication.util.AppConstants
 
 class HomeActivity : AppCompatActivity() {
 
@@ -22,11 +23,11 @@ class HomeActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
+        getUserEmail()
+    }
+    private fun getUserEmail(){
         intent.extras?.let {
-
-            binding.textViewEmail.text = it.getString("EMAIL")
-
+            binding.textViewEmail.text = it.getString(AppConstants.EMAIL_KEY)
         }
     }
 }

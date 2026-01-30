@@ -9,7 +9,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.fll.myapplication.business.UserBusiness
 import com.fll.myapplication.databinding.ActivityLoginBinding
+import com.fll.myapplication.util.AppConstants
 
 class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -28,19 +30,21 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         binding.btnCadastro.setOnClickListener(this)
     }
 
-    //tratando ev
+
     override fun onClick(v: View?) {
 
         if (v?.id == R.id.btnLogin) {
             val email = binding.editMail.text.toString()
             val password = binding.editSenha.text.toString()
-            if (!email.isNullOrEmpty() && !password.isNullOrEmpty()) {
+
+            if (UserBusiness().checkCredencials(email, password)) {
                 val bundle =  Bundle()
-                bundle.putString("EMAIL", email)
+                bundle.putString(AppConstants.EMAIL_KEY, email)
                 val intent: Intent = Intent(this, HomeActivity::class.java)
                 intent.putExtras(bundle)
                 startActivity(intent)
-            } else {
+            }
+            else {
                 Toast.makeText(this, R.string.toast_msg_informe_dados, Toast.LENGTH_SHORT).show()
             }
         } else if (v?.id == R.id.btnCadastro) {
