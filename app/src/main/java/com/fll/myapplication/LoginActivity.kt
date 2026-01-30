@@ -35,7 +35,10 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
             val email = binding.editMail.text.toString()
             val password = binding.editSenha.text.toString()
             if (!email.isNullOrEmpty() && !password.isNullOrEmpty()) {
+                val bundle =  Bundle()
+                bundle.putString("EMAIL", email)
                 val intent: Intent = Intent(this, HomeActivity::class.java)
+                intent.putExtras(bundle)
                 startActivity(intent)
             } else {
                 Toast.makeText(this, R.string.toast_msg_informe_dados, Toast.LENGTH_SHORT).show()
