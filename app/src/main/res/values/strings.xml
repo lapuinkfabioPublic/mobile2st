@@ -3,7 +3,7 @@
     <string name="senha">Senha</string>
     <string name="cadastro">Cadastro</string>
     <string name="login">login</string>
-    <string name="email">email</string>
+    <string name="email">E-mail</string>
     <string name="toast_msg_informe_dados">Informe os dados necessários!</string>
 
 </resources>
